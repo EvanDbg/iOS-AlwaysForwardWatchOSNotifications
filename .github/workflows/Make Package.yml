@@ -34,6 +34,8 @@ jobs:
           sudo git clone https://github.com/EvanDbg/XcodeDefaultOb.git ../XcodeDefaultOb
           sudo mkdir -p $THEOS/sdks/iPhoneOS14.4.sdk
           sudo cp -r ../XcodeDefaultOb/iPhoneOS14.4.sdk/* $THEOS/sdks/iPhoneOS14.4.sdk/
+          sudo cp ../XcodeDefaultOb/Prefix.pch $THEOS/Prefix.pch
+          sudo cp ../XcodeDefaultOb/RemoteLog.h $THEOS/include
         # Runs a set of commands using the runners shell
       - name: Make Clean Package
         run: |
