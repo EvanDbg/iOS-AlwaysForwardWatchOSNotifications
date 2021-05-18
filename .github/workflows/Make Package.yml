@@ -38,6 +38,7 @@ jobs:
       - name: Make Clean Package
         run: |
           sudo gsed -i '/export PREFIX/ c export THEOS=/opt/theos' Makefile
+          sudo gsed -i '/PACKAGE_VERSION=$(THEOS_PACKAGE_BASE_VERSION)/ c #PACKAGE_VERSION=$(THEOS_PACKAGE_BASE_VERSION)' Makefile
           make clean package
           
       - name: Extract Release Tag
